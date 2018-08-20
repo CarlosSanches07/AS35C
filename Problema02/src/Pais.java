@@ -40,5 +40,8 @@ public class Pais {
         this.paisSigla = paisSigla;
     }
     
+    public boolean validaNome(List<Pais> paises,  String nome) {
+        return paises.stream().anyMatch(a -> a.nome.equals(nome));
+    }
     
 }
