@@ -3,8 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-import java.util.List;
-import java.util.function.Predicate;
+
 /**
  *
  * @author mathe
@@ -44,38 +43,31 @@ public class Cliente {
         return idade;
     }
 
-    public void setIdade (int idade) {
+    public void setIdade(int idade) {
         this.idade = idade;
     }
 
-    public String getTelefone () {
+    public String getTelefone() {
         return telefone;
     }
 
-    public void setTelefone (String telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 
-    public float getLimite () {
+    public float getLimite() {
         return limite;
     }
 
-    public void setLimite (int idade) {
-        float limite = 0;
-        if (idade > 35)
-            limite = 500;
-        else if (idade > 18);
-            limite = 300;
-        else
-            limite = 100;
+    public void setLimite(float limite) {
         this.limite = limite;
     }
 
-    public String getPaisNome () {
+    public String getPaisNome() {
         return paisNome;
     }
 
-    public void setPaisNome (String paisNome) {
+    public void setPaisNome(String paisNome) {
         this.paisNome = paisNome;
     }
 
@@ -83,20 +75,8 @@ public class Cliente {
         return paisSigla;
     }
 
-    public void setPaisSigla (String paisSigla) {
+    public void setPaisSigla(String paisSigla) {
         this.paisSigla = paisSigla;
-    }
-
-    public boolean validaNome (List<Cliente> clientes,  String nome) {
-        return clientes.stream().anyMatch(a -> a.getNome().equalsIgnoreCase(nome));
-    }
-
-    public void bonusBrasil (String pais) {
-        this.limite += cliente.getPaisNome().equalsIgnoreCase("brasil") ? 100 : 0;
-    }
-
-    public boolean validaTamanhoNome () {
-        return this.getNome().lenght() > 5 ;
     }
     
 }

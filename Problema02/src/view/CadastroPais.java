@@ -16,19 +16,7 @@ public class CadastroPais extends javax.swing.JFrame {
      */
     public CadastroPais() {
         initComponents();
-        jLabel1.setText("CADASTRO DE PAISES");
-
-        jLabel2.setText("PAÍS:");
-
-        jLabel3.setText("SIGLA:");
-
-        jTextField1.setText("");
-
-        jTextField2.setText("");
-
-        jButton1.setText("CONFIMAR");
-
-        jButton2.setText("CANCELAR");
+  
     }
 
     /**
@@ -45,24 +33,20 @@ public class CadastroPais extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnConfirmar = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("jLabel1");
+        jLabel1.setText("CADASTRO DE PAISES");
 
-        jLabel2.setText("jLabel2");
+        jLabel2.setText("PAÍS:");
 
-        jLabel3.setText("jLabel3");
+        jLabel3.setText("SIGLA:");
 
-        jTextField1.setText("jTextField1");
+        btnConfirmar.setText("CONFIRMAR");
 
-        jTextField2.setText("jTextField2");
-
-        jButton1.setText("jButton1");
-
-        jButton2.setText("jButton2");
+        btnCancelar.setText("CANCELAR");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -78,9 +62,9 @@ public class CadastroPais extends javax.swing.JFrame {
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(btnConfirmar)
                         .addGap(35, 35, 35)
-                        .addComponent(jButton2))
+                        .addComponent(btnCancelar))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -101,8 +85,8 @@ public class CadastroPais extends javax.swing.JFrame {
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1))
+                    .addComponent(btnCancelar)
+                    .addComponent(btnConfirmar))
                 .addGap(117, 117, 117))
         );
 
@@ -145,8 +129,8 @@ public class CadastroPais extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnConfirmar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
