@@ -3,7 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+import java.util.List;
+import java.util.function.Predicate;
 /**
  *
  * @author mathe
@@ -59,7 +60,14 @@ public class Cliente {
         return limite;
     }
 
-    public void setLimite(float limite) {
+    public void setLimite (int idade) {
+        float limite = 0;
+        if (idade > 35)
+            limite = 500;
+        else if (idade > 18);
+            limite = 300;
+        else
+            limite = 100;
         this.limite = limite;
     }
 
@@ -78,5 +86,16 @@ public class Cliente {
     public void setPaisSigla(String paisSigla) {
         this.paisSigla = paisSigla;
     }
+
+    public boolean validaNome (List<Cliente> clientes,  String nome) {
+        return clientes.stream().anyMatch(a -> a.getNome().equalsIgnoreCase(nome));
+    }
+     public void bonusBrasil (String pais) {
+        this.limite += cliente.getPaisNome().equalsIgnoreCase("brasil") ? 100 : 0;
+    }
+     public boolean validaTamanhoNome () {
+        return this.getNome().lenght() > 5 ;
+    }
+    
     
 }

@@ -3,7 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+import java.util.List;
+import java.util.function.Predicate;
 /**
  *
  * @author mathe
@@ -40,5 +41,7 @@ public class Pais {
         this.paisSigla = paisSigla;
     }
     
-    
+    public boolean validaNome(List<Pais> paises,  String nome) {
+        return paises.stream().anyMatch(a -> a.nome.equals(nome));
+    }
 }
