@@ -5,6 +5,8 @@
  */
 package view;
 
+import Classes.Cliente;
+import java.util.List;
 import javax.swing.JOptionPane;
 
 /**
@@ -16,7 +18,13 @@ public class CadastroCliente extends javax.swing.JFrame {
     /**
      * Creates new form CadastroCliente
      */
+   public List<Cliente> clientes;
     public CadastroCliente() {
+        initComponents();
+    }
+
+    public CadastroCliente(List<Cliente> clientes) {
+        this.clientes = clientes;
         initComponents();
     }
 

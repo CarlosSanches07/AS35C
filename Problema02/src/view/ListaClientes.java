@@ -159,9 +159,11 @@ public class ListaClientes extends javax.swing.JFrame {
 
     private void btnCadastraPaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastraPaisActionPerformed
         // TODO add your handling code here:
-        CadastroPais cadastroPais = new CadastroPais();
+        CadastroPais cadastroPais = new CadastroPais(this.paises);
         cadastroPais.setVisible(true);
         dispose();
+        System.out.println(this.paises);
+
     }//GEN-LAST:event_btnCadastraPaisActionPerformed
     
     public final void AtualizaComponentes() {
