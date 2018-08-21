@@ -1,3 +1,5 @@
+package Classes;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -61,14 +63,14 @@ public class Cliente {
     }
 
     public void setLimite (int idade) {
-        float limite = 0;
+        float lim;
         if (idade > 35)
-            limite = 500;
-        else if (idade > 18);
-            limite = 300;
+            lim = 500;
+        else if (idade > 18)
+            lim = 300;
         else
-            limite = 100;
-        this.limite = limite;
+            lim = 100;
+        this.limite = lim;
     }
 
     public String getPaisNome() {
@@ -91,10 +93,10 @@ public class Cliente {
         return clientes.stream().anyMatch(a -> a.getNome().equalsIgnoreCase(nome));
     }
      public void bonusBrasil (String pais) {
-        this.limite += cliente.getPaisNome().equalsIgnoreCase("brasil") ? 100 : 0;
+        this.limite += this.getPaisNome().equalsIgnoreCase("brasil") ? 100 : 0;
     }
      public boolean validaTamanhoNome () {
-        return this.getNome().lenght() > 5 ;
+        return this.getNome().length() > 5 ;
     }
     
     

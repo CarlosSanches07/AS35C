@@ -5,6 +5,12 @@
  */
 package view;
 
+import Classes.Cliente;
+import Classes.Pais;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author mathe
@@ -14,6 +20,8 @@ public class ListaClientes extends javax.swing.JFrame {
     /**
      * Creates new form ListaClientes
      */
+    public List<Cliente> clientes = new ArrayList<>();
+    public List<Pais> paises = new ArrayList<>();
     public ListaClientes() {
         initComponents();
         AtualizaComponentes();    
@@ -36,6 +44,7 @@ public class ListaClientes extends javax.swing.JFrame {
         btnCadastraPais = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -51,6 +60,12 @@ public class ListaClientes extends javax.swing.JFrame {
             }
         ));
         jScrollPane1.setViewportView(lstCliente);
+        if (lstCliente.getColumnModel().getColumnCount() > 0) {
+            lstCliente.getColumnModel().getColumn(0).setHeaderValue("Title 1");
+            lstCliente.getColumnModel().getColumn(1).setHeaderValue("Title 2");
+            lstCliente.getColumnModel().getColumn(2).setHeaderValue("Title 3");
+            lstCliente.getColumnModel().getColumn(3).setHeaderValue("Title 4");
+        }
 
         lstPais.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -73,44 +88,53 @@ public class ListaClientes extends javax.swing.JFrame {
 
         jLabel2.setText("Listagem de Paises");
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel3.setText("Problema 02");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnCadastroCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel3))
+                        .addGap(377, 377, 377)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(43, 43, 43))
+                        .addComponent(btnCadastroCliente)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnCadastraPais))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnCadastraPais, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
+                        .addComponent(jLabel2)
+                        .addGap(193, 193, 193)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(34, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCadastroCliente)
-                    .addComponent(btnCadastraPais))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
+                    .addComponent(btnCadastraPais)
+                    .addComponent(jLabel3))
                 .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 276, Short.MAX_VALUE)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 265, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
@@ -120,8 +144,6 @@ public class ListaClientes extends javax.swing.JFrame {
                 
             lstPais.setModel(new javax.swing.table.DefaultTableModel(
                 new Object [][] {
-                    {null, null, null, null},
-                    {null, null, null, null}
                 },
                 new String [] {
                     "País", "Sigla"
@@ -129,15 +151,27 @@ public class ListaClientes extends javax.swing.JFrame {
             ));
             lstCliente.setModel(new javax.swing.table.DefaultTableModel(
                 new Object [][] {
-                    {null, null, null, null},
-                    {null, null, null, null},
-                    {null, null, null, null},
-                    {null, null, null, null}
                 },
                 new String [] {
                     "Nome", "Telefone", "Limite de crédito", "País"
                 }
             ));
+            this.clientes.add(new Cliente("carlos", 24, "(11) 959989064", 0, "brasil", "br"));
+            this.paises.add(new Pais("Brasil", "BR"));
+            DefaultTableModel modeloCliente = (DefaultTableModel) lstCliente.getModel();
+            DefaultTableModel modeloPais = (DefaultTableModel) lstPais.getModel();
+            this.clientes.stream().forEach(f -> modeloCliente.addRow(new Object[] {
+                f.getNome(), 
+                f.getTelefone(),
+                f.getPaisNome(),
+                f.getPaisSigla()
+            }));
+            this.paises.stream().forEach(f -> modeloPais.addRow(new Object[] {
+                f.getPaisNome(),
+                f.getPaisSigla()
+            }));
+            lstCliente.setModel(modeloCliente);
+            lstPais.setModel(modeloPais);
     }
     /**
      * @param args the command line arguments
@@ -179,6 +213,7 @@ public class ListaClientes extends javax.swing.JFrame {
     private javax.swing.JButton btnCadastroCliente;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable lstCliente;
