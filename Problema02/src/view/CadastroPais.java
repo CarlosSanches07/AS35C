@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
  *
  * @author mathe
  */
+public List<Pais> paises;
 public class CadastroPais extends javax.swing.JFrame {
 
     /**
@@ -19,6 +20,11 @@ public class CadastroPais extends javax.swing.JFrame {
     public CadastroPais() {
         initComponents();
   
+    }
+
+    public CadastroPais(List<Pais> paises) {
+        this.paises = paises;
+        initComponents();
     }
 
     /**
@@ -119,6 +125,7 @@ public class CadastroPais extends javax.swing.JFrame {
             erroNome();
             return;
         }
+        this.paises.add(new Pais(txtNome.getText(), txtSigla.getText()));
     }//GEN-LAST:event_btnConfirmarActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
