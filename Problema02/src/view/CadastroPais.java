@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
  * @author mathe
  */
 public class CadastroPais extends javax.swing.JFrame {
-public List<Pais> paises;
+public ListaClientes listaClientes;
 
     /**
      * Creates new form CadastroPais
@@ -24,8 +24,8 @@ public List<Pais> paises;
   
     }
 
-    public CadastroPais(List<Pais> paises) {
-        this.paises = paises;
+    public CadastroPais(ListaClientes listaClientes) {
+        this.listaClientes = listaClientes;
         initComponents();
     }
 
@@ -127,7 +127,7 @@ public List<Pais> paises;
             erroNome();
             return;
         }
-        this.paises.add(new Pais(txtNome.getText(), txtSigla.getText()));
+        this.listaClientes.insereListaPaises(new Pais(txtNome.getText(), txtSigla.getText()));
     }//GEN-LAST:event_btnConfirmarActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed

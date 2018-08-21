@@ -161,8 +161,8 @@ public class ListaClientes extends javax.swing.JFrame {
         // TODO add your handling code here:
         CadastroPais cadastroPais = new CadastroPais(this.paises);
         cadastroPais.setVisible(true);
-        dispose();
         System.out.println(this.paises);
+        dispose();
 
     }//GEN-LAST:event_btnCadastraPaisActionPerformed
     
@@ -198,6 +198,14 @@ public class ListaClientes extends javax.swing.JFrame {
             }));
             lstCliente.setModel(modeloCliente);
             lstPais.setModel(modeloPais);
+    }
+
+    insereListaCliente(Cliente c) {
+        this.clientes.add(c);
+    }
+
+    insereListaPaises(Pais p) {
+        this.paises.add(p);
     }
     /**
      * @param args the command line arguments

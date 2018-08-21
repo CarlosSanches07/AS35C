@@ -18,12 +18,12 @@ public class CadastroCliente extends javax.swing.JFrame {
     /**
      * Creates new form CadastroCliente
      */
-   public List<Cliente> clientes;
+   public ListaClientes clientes;
     public CadastroCliente() {
         initComponents();
     }
 
-    public CadastroCliente(List<Cliente> clientes) {
+    public CadastroCliente(ListaClientes l) {
         this.clientes = clientes;
         initComponents();
     }
