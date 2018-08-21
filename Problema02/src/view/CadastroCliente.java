@@ -166,7 +166,9 @@ public class CadastroCliente extends javax.swing.JFrame {
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
         // TODO add your handling code here:
-        
+        ListaClientes form2 = new ListaClientes();
+        form2.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnCancelarActionPerformed
     public void erroNome(){
         JOptionPane.showMessageDialog(null, "Nenhum campo pode estar vazio, exceto telefone!");

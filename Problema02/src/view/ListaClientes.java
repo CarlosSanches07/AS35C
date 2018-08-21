@@ -154,12 +154,14 @@ public class ListaClientes extends javax.swing.JFrame {
         // TODO add your handling code here:
         CadastroCliente cadastroClientes = new CadastroCliente();
         cadastroClientes.setVisible(true); 
+        dispose();
     }//GEN-LAST:event_btnCadastroClienteActionPerformed
 
     private void btnCadastraPaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastraPaisActionPerformed
         // TODO add your handling code here:
         CadastroPais cadastroPais = new CadastroPais();
         cadastroPais.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnCadastraPaisActionPerformed
     
     public final void AtualizaComponentes() {
