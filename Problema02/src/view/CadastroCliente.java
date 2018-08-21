@@ -61,6 +61,11 @@ public class CadastroCliente extends javax.swing.JFrame {
         });
 
         btnCancelar.setText("CANCELAR");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
+            }
+        });
 
         jLabel6.setText("CADASTRO DE CLIENTES");
 
@@ -158,6 +163,11 @@ public class CadastroCliente extends javax.swing.JFrame {
             erroNome();
         }
     }//GEN-LAST:event_btnConfirmarActionPerformed
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btnCancelarActionPerformed
     public void erroNome(){
         JOptionPane.showMessageDialog(null, "Nenhum campo pode estar vazio, exceto telefone!");
     }

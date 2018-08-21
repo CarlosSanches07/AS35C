@@ -81,8 +81,18 @@ public class ListaClientes extends javax.swing.JFrame {
         jScrollPane2.setViewportView(lstPais);
 
         btnCadastroCliente.setText("Cadastrar Clientes");
+        btnCadastroCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastroClienteActionPerformed(evt);
+            }
+        });
 
         btnCadastraPais.setText("Cadastrar Paises");
+        btnCadastraPais.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastraPaisActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Listagem de Clientes");
 
@@ -139,6 +149,15 @@ public class ListaClientes extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastroClienteActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btnCadastroClienteActionPerformed
+
+    private void btnCadastraPaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastraPaisActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCadastraPaisActionPerformed
     
     public final void AtualizaComponentes() {
                 
