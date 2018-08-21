@@ -152,8 +152,8 @@ public class ListaClientes extends javax.swing.JFrame {
 
     private void btnCadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastroClienteActionPerformed
         // TODO add your handling code here:
-        CadastroClientes cadastroCliente = new CadastroClientes();
-        cadastro.setVisible(true); 
+        CadastroCliente cadastroClientes = new CadastroCliente();
+        cadastroClientes.setVisible(true); 
     }//GEN-LAST:event_btnCadastroClienteActionPerformed
 
     private void btnCadastraPaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastraPaisActionPerformed
