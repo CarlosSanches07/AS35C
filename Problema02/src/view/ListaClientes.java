@@ -159,7 +159,7 @@ public class ListaClientes extends javax.swing.JFrame {
 
     private void btnCadastraPaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastraPaisActionPerformed
         // TODO add your handling code here:
-        CadastroPais cadastroPais = new CadastroPais(this.paises);
+        CadastroPais cadastroPais = new CadastroPais(this);
         cadastroPais.setVisible(true);
         System.out.println(this.paises);
         dispose();
@@ -200,12 +200,21 @@ public class ListaClientes extends javax.swing.JFrame {
             lstPais.setModel(modeloPais);
     }
 
-    insereListaCliente(Cliente c) {
+    public void insereListaCliente(Cliente c) {
         this.clientes.add(c);
     }
 
-    insereListaPaises(Pais p) {
+    public void insereListaPaises(Pais p) {
         this.paises.add(p);
+    }
+    
+    public void insereTabelaPais(List<Pais> paises) {
+        DefaultTableModel modeloPais = (DefaultTableModel) lstPais.getModel();
+        this.paises.stream().forEach(f -> modeloPais.addRow(new Object[] {
+                f.getPaisNome(),
+                f.getPaisSigla()
+            }));
+        lstPais.setModel(modeloPais);
     }
     /**
      * @param args the command line arguments

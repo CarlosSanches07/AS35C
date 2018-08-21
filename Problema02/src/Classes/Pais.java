@@ -20,6 +20,10 @@ public class Pais {
         this.paisNome = paisNome;
         this.paisSigla = paisSigla;
     }
+    
+    public Pais() {
+        
+    }
 
     @Override
     public String toString() {

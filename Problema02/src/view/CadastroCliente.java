@@ -158,6 +158,8 @@ public class CadastroCliente extends javax.swing.JFrame {
     private void btnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarActionPerformed
         // TODO add your handling code here:
         String nome = "", idade = "", pais = "", sigla = "", telefone = "";
+        int idd;
+        boolean op;
         try {
             nome = this.txtNome.getText();
             idade = this.txtIdade.getText();
@@ -165,11 +167,23 @@ public class CadastroCliente extends javax.swing.JFrame {
             sigla = this.txtSigla.getText();
             telefone = this.txtTelefone.getText();
         }catch(Exception e){
-            erroNome();
+            erroPadrao();
         }
         if (nome.isEmpty() || sigla.isEmpty() || pais.isEmpty() || idade.isEmpty()) {
+            erroPadrao();
+        }
+        /*Cliente c = new Cliente();
+        idd = Integer.parseInt(idade);
+        c.setLimite(idd);
+        op = c.validaNome(clientes.clientes, nome);
+        if(op){
             erroNome();
         }
+        c.bonusBrasil(pais);
+        op = c.validaTamanhoNome(nome);
+        if(!op){
+            erroNome();
+        }*/
     }//GEN-LAST:event_btnConfirmarActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
@@ -178,8 +192,11 @@ public class CadastroCliente extends javax.swing.JFrame {
         form2.setVisible(true);
         dispose();
     }//GEN-LAST:event_btnCancelarActionPerformed
-    public void erroNome(){
+    public void erroPadrao(){
         JOptionPane.showMessageDialog(null, "Nenhum campo pode estar vazio, exceto telefone!");
+    }
+    public void erroNome(){
+        JOptionPane.showMessageDialog(null, "Nome já existente ou menor que 5 caracteres!");
     }
     /**
      * @param args the command line arguments
@@ -231,4 +248,5 @@ public class CadastroCliente extends javax.swing.JFrame {
     private javax.swing.JTextField txtSigla;
     private javax.swing.JTextField txtTelefone;
     // End of variables declaration//GEN-END:variables
+
 }

@@ -28,6 +28,9 @@ public class Cliente {
         this.paisNome = paisNome;
         this.paisSigla = paisSigla;
     }    
+    public Cliente(){
+        
+    }
 
     @Override
     public String toString() {
@@ -95,8 +98,8 @@ public class Cliente {
      public void bonusBrasil (String pais) {
         this.limite += this.getPaisNome().equalsIgnoreCase("brasil") ? 100 : 0;
     }
-     public boolean validaTamanhoNome () {
-        return this.getNome().length() > 5 ;
+     public boolean validaTamanhoNome (String nome) {
+        return this.nome.length() > 5 ;
     }
     
     

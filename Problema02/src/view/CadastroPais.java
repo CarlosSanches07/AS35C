@@ -127,6 +127,13 @@ public ListaClientes listaClientes;
             erroNome();
             return;
         }
+        Pais p = new Pais();
+        if(p.validaNome(this.listaClientes.paises, nome)) {
+            erroNomePais();
+            return;
+        }
+        System.out.println(this.listaClientes.paises);
+        this.listaClientes.insereTabelaPais(this.listaClientes.paises);
         this.listaClientes.insereListaPaises(new Pais(txtNome.getText(), txtSigla.getText()));
     }//GEN-LAST:event_btnConfirmarActionPerformed
 
@@ -138,6 +145,9 @@ public ListaClientes listaClientes;
     }//GEN-LAST:event_btnCancelarActionPerformed
     public void erroNome(){
         JOptionPane.showMessageDialog(null, "Nenhum campo pode estar vazio!");
+    }
+    public void erroNomePais(){
+        JOptionPane.showMessageDialog(null, "País já cadastrado!");
     }
     /**
      * @param args the command line arguments
